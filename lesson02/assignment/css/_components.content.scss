@@ -20,6 +20,10 @@ html {
 	overflow: hidden;
 }
 
+.container:hover {
+	box-shadow: 0 8px 16px 0 rgba( $base-color, .7); // using color function
+}
+
 .employee-card-left {
 	float: left;
 	width: 18.75rem;
@@ -42,8 +46,9 @@ html {
 	height: auto;
 	width: 30%;
 }
+
 .employee-card__info {
-	@include employee-info-text;
+	@include employee-info-text; //using mixins
 }
 
 .employee-card__name {
