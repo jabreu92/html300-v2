@@ -14,51 +14,59 @@ html {
 
 .container {
 	border-radius: 5px;
-	border: 30px solid #F5F5F5;
+	border: 30px solid $smoke-border;
 	max-width: 100%;
 	height: auto;
 	overflow: hidden;
-}
 
-.employee-card-left {
-	float: left;
-	width: 18.75rem;
-	padding: 3rem;
-	margin: 1.0rem;
-	height: auto;
-}
 
-.employee-card-right {
-	float: left;
-	height: auto;
-	width: 28rem;
-	padding: 3rem;
-	margin-top: 2rem;
-	background-color: #F0F0F0;
-}
+	.employee-card-left {
+		float: left;
+		width: 18.75rem;
+		padding: 3rem;
+		margin: 1rem;
+		height: auto;
+		
+		.employee-card__image {
+			border-radius: 50%;
+			height: auto;
+			width: 30%;
 
-.employee-card-image {
-	border-radius: 50%;
-	height: auto;
-	width: 30%;
-}
+			&:hover {
+				.employee-card__image {
+					width: 50%;
+				}
+			}
+		}
 
-.employee-card-info {
-	font-size: 0.95rem;
-	font-family: 'Arvo', serif;
-}
+		.employee-card__name {
+			text-align: center;
+			font-family: $employee-card-fontfamily;
+			color: $grey;
+			font-size: $employee-name-fontsize;
+				
+		}
 
-.employee-card-name {
-	text-align: center;
-	font-family: arial;
-	color: grey;
-	font-size: 1.4rem;
-}
+		.employee-card__position {
+			text-align: center;
+			font-family: $employee-card-fontfamily;
+			color: $grey;
+			font-style: $italic-font;
+			font-size: $employee-position-fontsize;
+		}
+	}
 
-.employee-card-position {
-	text-align: center;
-	font-family: 'Arvo', serif;
-	color: grey;
-	font-style: italic;
-	font-size: 1.1rem;
+	.employee-card-right {
+		float: left;
+		height: auto;
+		width: 28rem;
+		padding: 3rem;
+		margin-top: 2rem;
+		background-color: $light-grey-background-info;
+
+		.employee-card__info {
+			font-size: $employee-info-fontsize;
+			font-family: $employee-card-fontfamily;
+		}
+	}
 }
