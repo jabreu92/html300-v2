@@ -1,4 +1,5 @@
+//mixins for the employee card info
 @mixin employee-info-text {
-    font-size: 0.95rem;
-	font-family: 'Arvo', serif;
+      font-size: $employee-info-fontsize;
+	  font-family: $employee-card-fontfamily;
   }

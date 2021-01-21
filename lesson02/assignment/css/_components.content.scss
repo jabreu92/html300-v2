@@ -15,7 +15,7 @@ html {
 .container {
 
 	border-radius: 5px;
-	border: 30px solid #F5F5F5;
+	border: 30px solid $smoke-grey-border;
 	max-width: 100%;
 	height: auto;
 	overflow: hidden;
@@ -30,6 +30,24 @@ html {
 			padding: 3rem;
 			margin: 1.0rem;
 			height: auto;
+
+			&___image  {
+				border-radius: 50%;
+				height: auto;
+			}
+			&___name{
+				text-align: center;
+				font-family: $employee-card-fontfamily;
+				color: $grey;
+				font-size: $employee-name-fontsize
+			}
+			&___position {
+				text-align: center;
+				font-family: $employee-card-fontfamily;
+				color: $grey;
+				font-style: italic;
+				font-size: $employee-position-fontsize;
+			}
 			
 		}
 		.employee-card-right {
@@ -38,38 +56,13 @@ html {
 			width: 28rem;
 			padding: 3rem;
 			margin-top: 2rem;
-			background-color: #F0F0F0;
+			background-color: $light-grey-background-info;
+
+			&___info {
+				@include employee-info-text; //using mixins
+			}
 		}
 }
 
 
 
-
-
-
-
-
-.employee-card-left__image {
-	border-radius: 50%;
-	height: auto;
-	
-}
-
-.employee-card-left__name {
-	text-align: center;
-	font-family: arial;
-	color: grey;
-	font-size: 1.4rem;
-}
-
-.employee-card-left__position {
-	text-align: center;
-	font-family: 'Arvo', serif;
-	color: grey;
-	font-style: italic;
-	font-size: 1.1rem;
-}
-
-.employee-card-right__info {
-	@include employee-info-text; //using mixins
-}
