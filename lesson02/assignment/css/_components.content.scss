@@ -13,55 +13,63 @@ html {
 }
 
 .container {
+
 	border-radius: 5px;
 	border: 30px solid #F5F5F5;
 	max-width: 100%;
 	height: auto;
 	overflow: hidden;
+
+	&:hover {
+		  box-shadow: 0 8px 16px 0 rgba( $base-color, .7); // using color function
+		}
+
+		.employee-card-left {
+			float: left;
+			width: 18.75rem;
+			padding: 3rem;
+			margin: 1.0rem;
+			height: auto;
+			
+		}
+		.employee-card-right {
+			float: left;
+			height: auto;
+			width: 28rem;
+			padding: 3rem;
+			margin-top: 2rem;
+			background-color: #F0F0F0;
+		}
 }
 
-.container:hover {
-	box-shadow: 0 8px 16px 0 rgba( $base-color, .7); // using color function
-}
 
-.employee-card-left {
-	float: left;
-	width: 18.75rem;
-	padding: 3rem;
-	margin: 1.0rem;
-	height: auto;
-}
 
-.employee-card-right {
-	float: left;
-	height: auto;
-	width: 28rem;
-	padding: 3rem;
-	margin-top: 2rem;
-	background-color: #F0F0F0;
-}
 
-.employee-card__image {
+
+
+
+
+.employee-card-left__image {
 	border-radius: 50%;
 	height: auto;
-	width: 30%;
+	
 }
 
-.employee-card__info {
-	@include employee-info-text; //using mixins
-}
-
-.employee-card__name {
+.employee-card-left__name {
 	text-align: center;
 	font-family: arial;
 	color: grey;
 	font-size: 1.4rem;
 }
 
-.employee-card__position {
+.employee-card-left__position {
 	text-align: center;
 	font-family: 'Arvo', serif;
 	color: grey;
 	font-style: italic;
 	font-size: 1.1rem;
+}
+
+.employee-card-right__info {
+	@include employee-info-text; //using mixins
 }
