@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Assignment 1 - Part 2 Example</title>
-  <script src="scripts.js"></script>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <main>
-    <h1>Using ES6+ Methods in DOM Interactions</h1>
-    <form id="example-form">
-      <label>Enter your favorite number:
-        <input type="text" class="input">
-      </label>
-      <input type="submit" value="See Demo!">
-      <p>The total of my array elements summed with your favorite number is: <span class="output"></span></p>
-    </form>
-  </main>
-</body>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Assignment 1 - Part 2 Example</title>
+      <script src="scripts.js"></script>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <main>
+         <h1>Using ES6+ Methods in DOM Interactions</h1>
+         <form id="form1">
+            <label>Enter your favorite number :
+            <input type="text"  class="input">
+            </label>
+            <input type="submit"  value="Function 1 !">
+            <p>Map Function, we are going to add the favorite number to the array [0, 1, 2, 3, 5, 8] <span class="output" style="color: green;"></span></p>
+         </form>
+         <form id="form2">
+            <label>Enter your favorite number :
+            <input type="text"  class="input">
+            </label>
+            <input type="submit"  value="Function 2 !">
+            <p>Filter Function, we are going to get elements that are greater than the favorite number in the [0, 1, 2, 3, 5, 8] array <span class="output" style="color: green"></span></p>
+         </form>
+         <form id="form3">
+            <label>Enter your favorite number :
+            <input type="text"  class="input">
+            </label>
+            <input type="submit"  value="Function 3 !">
+            <p>The Every Function will check if every single element in the array [1, 2, 3, 4, 5, 6] is greater than the favorite number <span class="output" style="color: green"></span></p>
+         </form>
+         <form id="form4">
+            <label>Enter your favorite number :
+            <input type="text"  class="input">
+            </label>
+            <input type="submit"  value="Function 4 !">
+            <p>The Some Function will check if any element in the array [0, 1, 2, 3, 5, 8] is greater than the favorite number <span class="output" style="color: green"></span></p>
+         </form>
+      </main>
+   </body>
 </html>
