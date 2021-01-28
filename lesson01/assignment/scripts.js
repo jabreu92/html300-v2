@@ -6,7 +6,8 @@ document. addEventListener("DOMContentLoaded", function(){
 
   exampleForm.addEventListener('submit', function(event){
     // Prevent the form from trying to submit to a server
-    event.preventDefault()
+    event.preventDefault();
+   
 
     // An array that we can transform based on user input
     let data = [0, 1, 2, 3, 5, 8]
@@ -32,7 +33,7 @@ document. addEventListener("DOMContentLoaded", function(){
       });
       console.log(filteredArray.toString());
 
-      //3: The every method, we will check if every single elementin the array is greater than the favorite number 
+      //3: The every method, we will check if every single element in the array is greater than the favorite number 
       let everyArray = data.every(function(value){
         return value > userNumber;
       });
@@ -49,11 +50,11 @@ document. addEventListener("DOMContentLoaded", function(){
 
 
       // Output the total to the page- no need to convert the numeric sum back to a string, HTML will just print the number as a string
-      document.querySelector('#example-form .output').innerHTML = mapArray.toString();
+      document.querySelector('#example-form .output_1').innerHTML = mapArray.toString();
     }
 
     // Clear the form field so the user can try again
-    inputField.value = ''
+    inputField.value = '';
   })
 
 
