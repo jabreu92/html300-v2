@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  
+  --fw-normal: 400;
+  --fw-bold: 700;
+  
+  --clr: #b7c9e5;
+}
+
+
 *, *::before, *::after {
     box-sizing: border-box; /* content to look border box nicely */
     margin: 0; /* getting rid of margins */
@@ -14,17 +28,16 @@ body {
 
 .card {
     width: 400px;
+ 
     
 }
 
 .card__content {
     text-align: center;
     position: relative;
-    padding: 5em;
+    padding: 15em 5em;
     transition: transform 3s;
-    background: pink;
     transform-style: preserve-3d; /*We want this to rotate independent from the parent to do we go to card content and transform style  preserve 3d*/
-
 }
 /* Adding hover effect to the card parent element, but when we hover on the card we only want to rotate the content not the whole card */
 .card:hover .card__content {
@@ -39,14 +52,52 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2em;
+    padding: 5em 3em;
     backface-visibility: hidden; /** This comes to play when things are backwords it will hide the back side of the card **/
     transform-style: preserve-3d; /** will make the front and back have its own distance from the card **/
+    display: grid;
+    align-content: center;
+   
 }
 
 .card__front {
-    background: lightgreen;
+    background-color: var(--clr);
+   /** background-image: url(https://downloads-pearljam-com.s3.amazonaws.com/img/ustour2018-callout/1527985684fd4c5c7bb1580d6502aa41f75f2228d2.jpg); **/
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+    color: #333;
+    animation: pulse 3.5s infinite;
+    background-color: rgba(255, 82, 82, 1);
+    
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0  rgba(255, 82, 82, 0.7);
+
+    }
+
+    70% {
+        transform: scale(0.91);
+        box-shadow: 0 0 0 30px  rgba(255, 82, 82, 0);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid currentColor;
+    transform: var(--level-one);
+  }
 
 .card__title {
     /** this is open possibility due to preserve 3d property **/
