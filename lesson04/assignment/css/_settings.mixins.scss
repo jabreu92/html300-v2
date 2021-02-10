@@ -1,5 +1,5 @@
-//mixins for the employee card info
-@mixin employee-info-text {
+//mixins for event information
+@mixin event-info-text {
       font-size: $employee-info-fontsize;
 	  font-family: $employee-card-fontfamily;
   }

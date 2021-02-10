@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
-:root {
-	--level-one: translateZ(3rem);
-	--level-two: translateZ(6rem);
-	--level-three: translateZ(9rem);
-	--fw-normal: 400;
-	--fw-bold: 700;
-	--clr: #b7c9e5;
-}
+//** Reference Source Material: https://www.youtube.com/watch?v=FeJEEE3zc4U **/
 
 *,
 *::before,
@@ -15,36 +7,51 @@
 	margin: 0;
 }
 
-
-/* height: 100vh; means the height of this element is equal to 100% of the viewport height.
- example: height: 50vh; If your screen height is 1000px, your element height will be equal to 500px (50% of 1000px). 
- height: calc(100% - 100px); will calculate the size of the element by using the value of the element
- */
-
 body {
-	height: 100vh;
+	height: auto;
 	display: grid;
 	place-items: center;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Arvo', sans-serif;
 }
 /*************************************************************************************************************************************/
 
 
-.card {
+.event {
 
-	width: 400px;
+	width: 350px;
+	height: auto;
 
 	&__content {
-		text-align: center;
+
 	position: relative;
-	padding: 15em 5em;
-	transition: transform 3s;
-	transform-style: preserve-3d;
-	/*We want this to rotate independent from the parent to do we go to card content and transform style  preserve 3d*/
-
-
+	padding: 15rem 5rem;
+	text-align: center;
+	transition: transform 2.5s;
+	transform-style: preserve-3d;/*We want this to rotate independent from the parent to do we go to card content and transform style  preserve 3d*/
 	}
 
+	&__title {
+		font-size: 3.5rem;
+		transform: translateZ(9rem);
+		text-transform: uppercase;
+	}
+	
+	&__subtitle {
+
+		text-transform: uppercase;
+		letter-spacing: 0.5rem;
+		font-size: 1.1rem;
+		font-weight: 700;
+		transform: translateZ(6rem);
+		opacity: .9;
+	}
+
+	&__body {
+		transform: translateZ(6rem);
+		font-weight: 400;
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
 	&__front {
 		position: absolute;
 		/* Need to have front and back of the card overlap each other ( top of each other for the effect to work )*/
@@ -52,21 +59,29 @@ body {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 2em 2em;
+		padding: 2.2rem 2.2rem;
 		backface-visibility: hidden;
 		/** This comes to play when things are backwords it will hide the back side of the card **/
 		transform-style: preserve-3d;
 		/** will make the front and back have its own distance from the card **/
 		display: grid;
 		align-content: center;
-		
-
-		background-color: var(--clr);
-		background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+		background-color: lightblue;
 		background-size: cover;
 		background-blend-mode: overlay;
 		color: #333;
 		animation: pulse 3.5s infinite;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 1rem;
+			bottom: 1rem;
+			left: 1rem;
+			right: 1rem;
+			border: 2.5px solid currentColor;
+			transform: translateZ(3rem);
+		}
 
 	}
 
@@ -77,43 +92,50 @@ body {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 2em 2em;
+		padding: 2rem 2rem;
 		backface-visibility: hidden;
 		/** This comes to play when things are backwords it will hide the back side of the card **/
 		transform-style: preserve-3d;
 		/** will make the front and back have its own distance from the card **/
 		display: grid;
 		align-content: center;
+		transform: rotateY(.5turn);
+		/** will make the card content from the backside to not be backwards **/
+		color: #b7c9e5;
+		background: #333;
 	}
-
 
 	&:hover &__content {
 		transform: rotateY(.5turn);
 	}
+	&__button {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+		transition-duration: 0.4s;
 
-
-
-
-
-
-
+		&:hover {
+			box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+		}
+	}
+	
 }
 
-
-
-/* Adding hover effect to the card parent element, but when we hover on the card we only want to rotate the content not the whole card */
-
-
-
-
-
+//Animation
 @keyframes pulse {
 	0% {
 		transform: scale(0.9);
 		box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
 	}
 	70% {
-		transform: scale(0.91);
+		transform: scale(1.0);
 		box-shadow: 0 0 0 30px rgba(255, 82, 82, 0);
 	}
 	100% {
@@ -121,43 +143,7 @@ body {
 	}
 }
 
-.card__front::before {
-	content: '';
-	position: absolute;
-	--spacer: 1em;
-	top: var(--spacer);
-	bottom: var(--spacer);
-	left: var(--spacer);
-	right: var(--spacer);
-	border: 3px solid currentColor;
-	transform: var(--level-one);
-}
-
-.card__title {
-	font-size: 3.5rem;
-	transform: var(--level-three);
-	/** this is open possibility due to preserve 3d property **/
-	/** pulling the title towards us **/
-	order: 2;
-	text-transform: uppercase;
-}
-
-.card__subtitle {
-	transform: var(--level-two);
-	text-transform: uppercase;
-	letter-spacing: 4px;
-	font-size: 1rem;
-	font-weight: var(--fw-bold);
-	opacity: .9;
-}
-
-.card__body {
-	transform: var(--level-two);
-	font-weight: var(fw-normal);
-	font-size: 1rem;
-	line-height: 1.6;
-}
-
+//Icons
 .fa-clock {
 	color: teal;
 }
@@ -166,28 +152,4 @@ body {
 	color: teal;
 }
 
-.card__back {
-	transform: rotateY(.5turn);
-	/** will make the card content from the backside to not be backwards **/
-	color: var(--clr);
-	background: #333;
-}
 
-.card__button {
-	background-color: #4CAF50;
-	/* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
-	transition-duration: 0.4s;
-}
-
-.card__button:hover {
-	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
