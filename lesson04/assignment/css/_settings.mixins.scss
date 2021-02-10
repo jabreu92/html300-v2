@@ -1,5 +1,7 @@
 //mixins for event information
 @mixin event-info-text {
-      font-size: $employee-info-fontsize;
-	  font-family: $employee-card-fontfamily;
+      font-size: 1.1rem;
+      font-family: 'Arvo';
+      font-weight: 400;
+      line-height: 1.6;
   }

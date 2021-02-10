@@ -11,14 +11,26 @@ $robins: #01c1d6;
 $purple: #6e27c5;
 $blue: #150f96;
 $clr: #b7c9e5;
-
-//Colors for the employee Card:
 $smoke-grey-border: #F5F5F5;
 $light-grey-background-info: #F0F0F0;
 $grey: grey;
 $base-color: #AD141E;
-$level-one: translateZ(3rem);
-$level-two: translateZ(6rem);
-$level-three: translateZ(9rem);
-$fw-normal:400;
-$fw-bold: 700;
+$front-background-color: lightblue;
+$front-color: #333;
+$back-background-color: #333;
+$button-background: #4CAF50;
+//Transitions
+$level-one-z-translate: translateZ(3rem);
+$level-two-z-translate: translateZ(6rem);
+$level-three-z-translate: translateZ(9rem);
+//Fonts weights
+$normal:400;
+$bold: 700;
+//Variables for the card fonts
+$event-title-fontsize: 3.5rem;
+$event-subtitle-fontsize: 1.1rem;
+$event-subtitle-letter-space: 0.5rem;
+$event-body-fontsize: 1.0rem;
+$event-card-fontfamily: 'Arvo';
+//card rotations:
+$card-rotate-y-turn: .5turn;
