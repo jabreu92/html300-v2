@@ -26,6 +26,8 @@ html {
     "sidebar main-content main-content main-content"
     "sidebar main-content main-content main-content"
     "footer footer footer footer";
+    row-gap: 0.1rem;
+    column-gap: 0.1rem;
     font-family: "Inter", sans-serif;
     font-weight: 800;
     text-transform: uppercase;
@@ -39,11 +41,12 @@ html {
     background: red;
     color: white;
     border-radius: 5px;
-    
+    padding-top: 5px;
 }
 
 .navbar {
     grid-area: navbar;
+    color: white;
     border-radius: 5px;
     padding-top: 5px;
 }
@@ -71,7 +74,7 @@ html {
     padding-top: 5px;
 }
 
-//make it responsive in mobile
+//make it responsive
 
 @media only screen and (max-width: 550px) {
     .grid {
@@ -83,11 +86,11 @@ html {
         "sidebar"
         "main-content"
         "footer";
-        gap: 0.2rem;
     }
   }
-  //The nav would be our flexbox use bem methodology uses flex wrap
-.nav {
+  
+  .nav {
+    border-radius: 5px;
     background: $teal;
     display: flex;
     justify-content: space-between; // spreading the containers evenly
@@ -95,9 +98,23 @@ html {
     padding: 2rem 1rem;
     flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
     flex: 1 1 auto;
-    border-radius: 5px;
+    text-decoration: none;
     &-wrap {
         max-width: 1920px;
+    }
+    &__logo,
+    &__login {
+        font-size: 28px;
+        color: $white;
+        font-family: $font-fam;
+        text-decoration: none;
+        margin: 0 auto 2rem;
+        width: 100%;
+        text-align: center;
+        @include media-query(tab){
+            margin: 0;
+            width: auto;
+        }
     }
 
     &__list {
@@ -105,8 +122,6 @@ html {
         margin: 0 auto;
         list-style: none;
         text-align: center;
-        text-decoration: none;
-        text-align: left;
     }
     &__item {
         display: inline-block;
@@ -117,7 +132,11 @@ html {
             margin: 0;
         }
     }
+
     &__link {
         color: white;
-    } 
+    }
+
+
+
 }
