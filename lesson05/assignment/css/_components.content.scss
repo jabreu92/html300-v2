@@ -26,8 +26,6 @@ html {
     "sidebar main-content main-content main-content"
     "sidebar main-content main-content main-content"
     "footer footer footer footer";
-    row-gap: 0.1rem;
-    column-gap: 0.1rem;
     font-family: "Inter", sans-serif;
     font-weight: 800;
     text-transform: uppercase;
@@ -41,13 +39,11 @@ html {
     background: red;
     color: white;
     border-radius: 5px;
-    padding-top: 5px;
+    
 }
 
 .navbar {
     grid-area: navbar;
-    background: green;
-    color: white;
     border-radius: 5px;
     padding-top: 5px;
 }
@@ -75,7 +71,7 @@ html {
     padding-top: 5px;
 }
 
-//make it responsive
+//make it responsive in mobile
 
 @media only screen and (max-width: 550px) {
     .grid {
@@ -87,6 +83,41 @@ html {
         "sidebar"
         "main-content"
         "footer";
+        gap: 0.2rem;
     }
   }
-  
+  //The nav would be our flexbox use bem methodology uses flex wrap
+.nav {
+    background: $teal;
+    display: flex;
+    justify-content: space-between; // spreading the containers evenly
+    align-items: center; // put them on the center
+    padding: 2rem 1rem;
+    flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
+    flex: 1 1 auto;
+    border-radius: 5px;
+    &-wrap {
+        max-width: 1920px;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+        text-decoration: none;
+        text-align: left;
+    }
+    &__item {
+        display: inline-block;
+        font-size: 20px;
+        font-family: $font-fam;
+        margin-right: 2rem;
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    &__link {
+        color: white;
+    } 
+}
