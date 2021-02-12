@@ -11,3 +11,82 @@ html {
 .main {
     padding: 2rem;
 }
+//https://www.youtube.com/watch?v=HgwCeNVPlo0
+.grid {
+    display: grid; // defining the grid
+    //We can now define rows and columns inside the grid
+    grid-template-columns: 1fr 1fr; // this would define the coulmns as fractions 2 columns. //The auto will fit whatever content is inside the div
+    grid-template-rows: 1fr 1fr 1fr 1fr; // this is to set 4 rows.
+
+    grid-template-areas: 
+    "title title" // occupy the two columns for the first row
+    "header header" // the dot is a white space
+    "sidebar sidebar" 
+    "content content"
+    "footer footer"
+    ;
+    grid-gap: 10px;
+}
+
+.title {
+    //Lets say we want the title element to spand from the first column to the second column to take the entire row, we can do this with various ways
+    /*grid-column-start: 1;
+    grid-column-end:  3;
+    */
+    //another way is 
+    //grid-column: 1/3;
+    //grid-column-end: span 2; // span until column 2
+    //We can do the same thing, suppose we want the title to span  until row 2
+    //grid-row-end: span 2;
+    grid-area: title;
+
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+    //justify-self: start;  left side// makes the everything inside the content to be justified only to the content size inseatd of taking the whole grid
+    //justify-self: center;
+    //justify-self: end;
+    //align-self: center;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+
+.grid div:nth-child(even){
+    background-color: red;
+}
+
+.grid div:nth-child(odd){
+    background-color: green;
+}
+
+//make it responsive
+
+@media screen and (min-width: 736px){
+    .grid {
+        display: grid; // defining the grid
+        //We can now define rows and columns inside the grid
+        grid-template-columns: 1fr 500px 500px 1fr; // this would define the coulmns as fractions 2 columns. //The auto will fit whatever content is inside the div
+        grid-template-rows: 1fr 1fr 1fr 1fr; // this is to set 4 rows.
+    
+        grid-template-areas: 
+        ". title title ." // occupy the two columns for the first row
+        ". header header ." // the dot is a white space
+        ". sidebar content ." 
+        ". footer footer ."
+        ;
+    }
+}
