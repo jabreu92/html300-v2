@@ -23,55 +23,87 @@ html {
 		"sidebar main-content main-content main-content"
 		"sidebar main-content main-content main-content"
 		"footer footer footer footer";
-	row-gap: 0.1rem;
-	column-gap: 0.1rem;
-	font-family: "Inter", sans-serif;
-	font-weight: 800;
+	gap: $gap;
+
+	font-family: $font-fam;
+	font-weight: $grid-font-weight;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: $grid-font-size;
 	text-align: center;
-}
+	//Grid components below
+	.header {
+		grid-area: header;
+		background: $red;
+		color: $white;
+		border-radius: 5px;
+		padding-top: 5px;
+	}
+	.navbar {
+		grid-area: navbar;
+		color: $white;
+		border-radius: $grid-item-border-radius;
+		padding-top: $grid-item-padding-top;
+		//Navigation bar with flexbox implementation
+		.nav {
+			border-radius: $grid-item-border-radius;
+			background: $teal;
+			display: flex;
+			justify-content: space-between; // spreading the containers evenly
+			align-items: center; // put them on the center
+			padding: 2rem 1rem;
+			flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
+			flex: 1 1 auto;
+			text-decoration: none;
+			&-wrap {
+				max-width: 1920px;
+			}
+			&__list {
+				padding: 0;
+				margin: 0 auto;
+				list-style: none;
+				text-align: center;
+			}
+			&__item {
+				display: inline-block;
+				font-size: 20px;
+				font-family: $font-fam;
+				margin-right: 2rem;
+				&:last-of-type {
+					margin: 0;
+				}
+			}
 
-.header {
-	grid-area: header;
-	background: red;
-	color: white;
-	border-radius: 5px;
-	padding-top: 5px;
-}
+			&__link {
+				color: $white;
+			}
+		}
+	}
 
-.navbar {
-	grid-area: navbar;
-	color: white;
-	border-radius: 5px;
-	padding-top: 5px;
-}
+	.sidebar {
+		grid-area: sidebar;
+		background: $purple;
+		color: $white;
+		border-radius: $grid-item-border-radius;
+		padding-top: $grid-item-padding-top;
+	}
+	.main-content {
+		grid-area: main-content;
+		background: $orange;
+		color: $white;
+		border-radius: $grid-item-border-radius;
+		padding-top: $grid-item-padding-top;
+	}
 
-.sidebar {
-	grid-area: sidebar;
-	background: purple;
-	color: white;
-	border-radius: 5px;
-	padding-top: 5px;
-}
-.main-content {
-	grid-area: main-content;
-	background: orange;
-	color: white;
-	border-radius: 5px;
-	padding-top: 5px;
-}
-
-.footer {
-	grid-area: footer;
-	background: blue;
-	color: white;
-	border-radius: 5px;
-	padding-top: 5px;
+	.footer {
+		grid-area: footer;
+		background: $blue;
+		color: $white;
+		border-radius: $grid-item-border-radius;
+		padding-top: $grid-item-padding-top;
+	}
 }
 
 //make it responsive
-
 @media only screen and (max-width: 550px) {
 	.grid {
 		grid-template-columns: 1fr;
@@ -82,39 +114,5 @@ html {
 			"sidebar"
 			"main-content"
 			"footer";
-	}
-}
-
-.nav {
-	border-radius: 5px;
-	background: $teal;
-	display: flex;
-	justify-content: space-between; // spreading the containers evenly
-	align-items: center; // put them on the center
-	padding: 2rem 1rem;
-	flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
-	flex: 1 1 auto;
-	text-decoration: none;
-	&-wrap {
-		max-width: 1920px;
-	}
-	&__list {
-		padding: 0;
-		margin: 0 auto;
-		list-style: none;
-		text-align: center;
-	}
-	&__item {
-		display: inline-block;
-		font-size: 20px;
-		font-family: $font-fam;
-		margin-right: 2rem;
-		&:last-of-type {
-			margin: 0;
-		}
-	}
-
-	&__link {
-		color: white;
 	}
 }
