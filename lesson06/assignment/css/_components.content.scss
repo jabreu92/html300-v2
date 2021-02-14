@@ -17,53 +17,38 @@ html {
 	display: grid;
 	height: 100vh; // the whole screen
 	grid-template-columns: 1fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 0.8fr 0.5fr 1.5fr 1.5fr 0.8fr; // 5 rows
+	grid-template-rows: 0.8fr 0.2fr 1.5fr 1.5fr 0.8fr; // 5 rows
 	grid-template-areas:
 		"header header header header"
-		"navbar navbar navbar navbar"
+		"main-navbar main-navbar main-navbar main-navbar"
 		"sidebar main-content main-content main-content"
 		"sidebar main-content main-content main-content"
 		"footer footer footer footer";
-	gap: $gap;
-	font-family: $font-fam;
-	font-weight: $grid-font-weight;
-	text-transform: uppercase;
-	font-size: $grid-font-size;
-	text-align: center;
-
-
+	
 	.header {
 		grid-area: header;
-		background: $white;
-		border-radius: 5px;
-		padding-top: 5px;
+		background: $purple;
 	}
-	.navbar {
-		grid-area: navbar;
-        background: $white;
-		border-radius: $grid-item-border-radius;
-		padding-top: $grid-item-padding-top;
+	.main-navbar {
+		grid-area: main-navbar;
+        
 		
 	}
 
 	.sidebar {
 		grid-area: sidebar;
-		background: $white;
-		border-radius: $grid-item-border-radius;
-		padding-top: $grid-item-padding-top;
+		background: $blue;
+		
 	}
 	.main-content {
 		grid-area: main-content;
-		background: $white;
-		border-radius: $grid-item-border-radius;
-		padding-top: $grid-item-padding-top;
+		background: $orange;
+	
 	}
 
 	.footer {
 		grid-area: footer;
-		background: $white;
-		border-radius: $grid-item-border-radius;
-		padding-top: $grid-item-padding-top;
+		background: $red;
 	}
 }
 
@@ -74,7 +59,7 @@ html {
 		grid-template-rows: 1fr 0.4fr 1.2fr 2.2fr 1fr;
 		grid-template-areas:
 			"header"
-			"navbar"
+			"main-navbar"
 			"sidebar"
 			"main-content"
 			"footer";
