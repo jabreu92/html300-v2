@@ -22,7 +22,7 @@ html {
 	display: grid;
 	height: 100vh; // the whole screen
 	grid-template-columns: 1fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 0.8fr 0.2fr 1.5fr 1.5fr 0.8fr; // 5 rows
+	grid-template-rows: 0.8fr 0.2fr 0.9fr 1.9fr 0.8fr; // 5 rows
 	grid-template-areas:
 		"header header header header"
 		"main-navbar main-navbar main-navbar main-navbar"
