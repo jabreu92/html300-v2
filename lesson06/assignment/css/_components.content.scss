@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+    
 }
 
 *,
@@ -11,6 +12,7 @@ html {
     background: white;
     height: 100%;
     padding: 1rem;
+    
 }
 
 .main {
@@ -21,7 +23,7 @@ html {
 .grid {
 	display: grid;
 	height: 100vh; // the whole screen
-	grid-template-columns: 1fr 1fr 1fr 1fr; //4 columns
+	grid-template-columns: 1.8fr 1fr 1fr 1fr; //4 columns
 	grid-template-rows: 0.8fr 0.2fr 0.9fr 1.9fr 0.8fr; // 5 rows
 	grid-template-areas:
 		"header header header header"
