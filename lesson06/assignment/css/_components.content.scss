@@ -23,8 +23,8 @@ html {
 .grid {
 	display: grid;
 	height: 100vh; // the whole screen
-	grid-template-columns: 1.8fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 3fr 0.2fr 10fr 1.9fr 3fr; // 5 rows
+	grid-template-columns: 2fr 1fr 1fr 1fr; //4 columns
+	grid-template-rows: 3fr 0.2fr 10fr 5fr 2.5fr; // 5 rows
 	grid-template-areas:
 		"header header header header"
 		"main-navbar main-navbar main-navbar main-navbar"
@@ -50,7 +50,7 @@ html {
 	}
 	.main-content {
 		grid-area: main-content;
-		background: $orange;
+		
 	
 	}
 
@@ -85,7 +85,7 @@ html {
 
 	.main-content {
 		grid-area: main-content;
-		background: white;
+		
 	
 	}
 
@@ -102,6 +102,42 @@ html {
 	background: $white;
 
 }
+
+
+.carousel-item {
+
+	height: 32rem;
+	width: 100%;
+	background: grey;
+	color: white;
+	position: relative;
+
+	.container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-bottom: 2rem;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //make it responsive
 @media only screen and (max-width: 550px) {
