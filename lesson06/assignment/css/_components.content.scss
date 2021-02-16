@@ -65,13 +65,12 @@ html {
 	display: grid;
 	height: 100vh; // the whole screen
 	grid-template-columns: 1.8fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 3fr 0.2fr 10fr 1.9fr 3fr; // 5 rows
+	grid-template-rows: 3fr 0.2fr 10fr 1.9fr; // 5 rows
 	grid-template-areas:
 		"header header header header"
 		"main-navbar main-navbar main-navbar main-navbar"
 		"main-content main-content main-content main-content"
-		"main-content main-content main-content main-content"
-		"footer footer footer footer";
+		"main-content main-content main-content main-content";
    
 	
 	.header {
@@ -84,14 +83,9 @@ html {
 		
 	}
 
-	.sidebar {
-		grid-area: sidebar;
-		background: $white;
-		
-	}
 	.main-content {
 		grid-area: main-content;
-		background: $orange;
+		background: white;
 	
 	}
 
@@ -99,6 +93,14 @@ html {
 		grid-area: footer;
 		background: $red;
 	}
+}
+
+.accordion-button {
+	background: #e7f1ff;
+}
+.accordion-body {
+	background: $white;
+
 }
 
 //make it responsive
