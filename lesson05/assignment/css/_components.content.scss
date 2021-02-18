@@ -48,7 +48,7 @@ html {
 			border-radius: $grid-item-border-radius;
 			background: $teal;
 			display: flex;
-			justify-content: space-between; // spreading the containers evenly
+			justify-content: space-between; // spreading the containers evenly // experiment with this rule
 			align-items: center; // put them on the center
 			padding: 2rem 1rem;
 			flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
