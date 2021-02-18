@@ -23,9 +23,11 @@ html {
 .grid {
 	display: grid;
 	height: 100vh; // the whole screen
-	grid-template-columns: 2fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 3fr 0.2fr 10fr 5fr 2.5fr; // 5 rows
+	//grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+	grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); //4 columns
+	grid-template-rows: minmax(0,3fr) minmax(0,1fr) minmax(0,10fr) minmax(0,5fr) minmax(0,2.5fr); // 5 rows
 	gap: 1rem;
+	//https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()
 	grid-template-areas:
 		"header header header header"
 		"main-navbar main-navbar main-navbar main-navbar"
@@ -120,26 +122,3 @@ html {
 
 
 
-
-
-
-
-
-
-
-
-
-
-//make it responsive
-@media only screen and (max-width: 550px) {
-	.grid {
-		grid-template-columns: 1fr;
-		grid-template-rows: 3fr 0.2fr 10fr 1.9fr 3fr; // 5 rows
-		grid-template-areas:
-			"header"
-			"main-navbar"
-			"sidebar"
-			"main-content"
-			"footer";
-	}
-}
