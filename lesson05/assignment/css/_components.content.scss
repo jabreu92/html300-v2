@@ -47,17 +47,19 @@ html {
 		.nav {
 			border-radius: $grid-item-border-radius;
 			background: $teal;
-			display: flex;
-			justify-content: space-between; // spreading the containers evenly // experiment with this rule
-			align-items: center; // put them on the center
+			
 			padding: 2rem 1rem;
-			flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
-			flex: 1 1 auto;
+			
 			text-decoration: none;
 			&-wrap {
 				max-width: 1920px;
 			}
 			&__list {
+				display: flex;
+			justify-content: space-evenly; // spreading the containers evenly // experiment with this rule
+			align-items: center; // put them on the center
+			flex-wrap: wrap; // uses this to make the elements wrap into smaller screen sizes
+			flex: 1 1 auto;
 				padding: 0;
 				margin: 0 auto;
 				list-style: none;
