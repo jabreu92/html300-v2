@@ -1,6 +1,5 @@
 html {
 	box-sizing: border-box;
-    
 }
 
 *,
@@ -9,112 +8,25 @@ html {
 	box-sizing: inherit;
 }
 .body {
-    background: white;
-    margin: 0;
-    height: 100%;
-    
+	background: white;
+	margin: 0;
+	height: 100%;
 }
 
 .main {
 	padding: 2rem;
-    margin: 2rem;
-}
-
-.grid {
-	display: grid;
-	height: 100vh; // the whole screen
-	//grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
-	grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); //4 columns
-	grid-template-rows: minmax(0,3fr) minmax(0,1fr) minmax(0,10fr) minmax(0,5fr) minmax(0,2.5fr); // 5 rows
-	gap: 1rem;
-	//https://developer.mozilla.org/en-US/docs/Web/CSS/minmax()
-	grid-template-areas:
-		"header header header header"
-		"main-navbar main-navbar main-navbar main-navbar"
-		"sidebar main-content main-content main-content"
-		"sidebar main-content main-content main-content"
-		"footer footer footer footer";
-   
-	
-	.header {
-		grid-area: header;
-		background: $purple;
-	}
-	.main-navbar {
-		grid-area: main-navbar;
-        
-		
-	}
-
-	.sidebar {
-		grid-area: sidebar;
-		background: $white;
-		
-	}
-	.main-content {
-		grid-area: main-content;
-		
-	
-	}
-
-	.footer {
-		grid-area: footer;
-		background: $red;
-	}
-}
-
-
-.grid-faq {
-	display: grid;
-	gap: 1rem;
-	height: 100vh; // the whole screen
-	grid-template-columns: 1.8fr 1fr 1fr 1fr; //4 columns
-	grid-template-rows: 3fr 0.2fr 10fr 1.9fr; // 5 rows
-	grid-template-areas:
-		"header header header header"
-		"main-navbar main-navbar main-navbar main-navbar"
-		"main-content main-content main-content main-content"
-		"main-content main-content main-content main-content";
-   
-	
-	.header {
-		grid-area: header;
-		background: $purple;
-	}
-	.main-navbar {
-		grid-area: main-navbar;
-	}
-
-	.main-content {
-		grid-area: main-content;
-	}
-
-	.footer {
-		grid-area: footer;
-		background: $red;
-	}
+	margin: 2rem;
 }
 
 .accordion-button {
-	background: #e7f1ff;
+	background: $teal;
 }
 .accordion-body {
 	background: $white;
-
 }
 
 .carousel-item {
-	height: auto;
-	min-height: 500px;
-	padding: 1rem;
+	height: 32rem;
 	background: no-repeat center center scroll;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
-  }
-
-
-
-
-
+}
