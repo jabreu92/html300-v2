@@ -26,15 +26,11 @@ html {
 }
 
 .carousel-item {
-  background-image: url("/images/bar-show.jpg");
-  background-color: #cccccc;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-	
+	background-image: url($image-url);
+	background-color: $white;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
-
-
-
