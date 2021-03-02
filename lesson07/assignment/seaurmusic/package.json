@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli",
+  "name": "seaurmusic",
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "jabreu92 <jose.abreu4@hotmail.com>",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.21.2",
-    "vue": "^2.5.11",
-    "vue-router": "^4.0.4"
+    "vue": "^2.5.11"
   },
   "browserslist": [
     "> 1%",
@@ -20,7 +19,6 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@vue/cli-plugin-router": "^4.5.11",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",

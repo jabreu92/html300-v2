@@ -1,4 +1,4 @@
-# vue-cli
+# seaurmusic
 
 > A Vue.js project
 
