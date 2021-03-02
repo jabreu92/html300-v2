@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container fluid>
-      <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark" style="bacj"> 
+      <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark" class="mb-0 mt-1"> 
         <template v-slot:header> SeaUrMusic</template>
         <template v-slot:lead> Seattle's #1 Music Event Spot</template>
         <hr class="mb-4">
