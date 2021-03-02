@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    
- 
+    <TopHeader />
+    <TopNavbar />
+    <MainContent />
   </div>
 </template>
-
 <script>
+
+
+import TopHeader from './components/TopHeader.vue'
+import TopNavbar from './components/TopNavbar.vue'
+import MainContent from './components/MainContent.vue'
+
 export default {
-  name: 'app'
+  name: 'App',
+  components: { TopHeader, TopNavbar,
+    MainContent
+    
+  }
 }
 </script>
-
-<style lang="scss">
+<style scoped>
 
 </style>
