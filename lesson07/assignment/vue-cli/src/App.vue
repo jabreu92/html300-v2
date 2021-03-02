@@ -5,7 +5,6 @@
     <MainContent />
     <TopNavbar />
     <TopHeader />
-   
   </div>
 </template>
 <script>
