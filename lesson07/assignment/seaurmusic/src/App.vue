@@ -1,26 +1,17 @@
 <template>
   <div id="app">
-    <TopHeader />
-    <TopNavbar />
-    <MainContent />
-    <TopNavbar />
-    <TopHeader />
+    <h1> Lets Go Somewhere </h1>
+    <router-link to="/">Home</router-link>
+    <router-link to="/faq">Faq</router-link>
+    <router-view></router-view>
   </div>
 </template>
 <script>
 
 
-import TopHeader from './components/TopHeader.vue'
-import TopNavbar from './components/TopNavbar.vue'
-import MainContent from './components/MainContent.vue'
-
-
 export default {
   name: 'App',
-  components: { TopHeader, TopNavbar,
-    MainContent
-    
-  }
+ 
 }
 </script>
 <style scoped>
