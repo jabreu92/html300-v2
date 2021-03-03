@@ -1,14 +1,18 @@
 <template>
   <div>
-      <b-jumbotron bg-variant="dark" text-variant="white" border-variant="dark" class="mb-0 mt-1"> 
-        <template v-slot:header> {{headerText}}</template>
-        <template v-slot:lead> {{leadText}}</template>
-        <hr class="mb-1">
-        <p>{{addressText}}</p>
-      </b-jumbotron>
+    <b-jumbotron
+      bg-variant="dark"
+      text-variant="white"
+      border-variant="dark"
+      class="mb-0 mt-1"
+    >
+      <template v-slot:header> {{headerText}}</template>
+      <template v-slot:lead> {{leadText}}</template>
+      <hr class="mb-1" />
+      <p>{{addressText}}</p>
+    </b-jumbotron>
   </div>
 </template>
-
 <script scoped>
 export default {
   Name: 'JumbotronFooter',
@@ -25,8 +29,4 @@ export default {
 }
 </script>
 
-<style>
-
-
-
-</style>
+<style></style>
