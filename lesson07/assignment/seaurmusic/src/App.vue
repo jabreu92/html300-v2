@@ -6,17 +6,17 @@
     <router-view />
     -->
   
-    <CarrouselMain />
+    <DeckCards />
    
   </div>
 </template>
 <script>
 
 
-import CarrouselMain from './components/CarrouselMain.vue'
+import DeckCards from './components/DeckCards.vue'
 export default {
   name: 'App',
-  components: {CarrouselMain}
+  components: {DeckCards}
  
 }
 </script>
