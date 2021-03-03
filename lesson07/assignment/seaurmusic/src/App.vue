@@ -5,18 +5,18 @@
      <router-link to="/faq"> Faq</router-link> need to read on the navbar pills documentation for vue router
     <router-view />
     -->
-  
-    <DeckCards />
-   
+    <Home />
   </div>
 </template>
 <script>
 
 
-import DeckCards from './components/DeckCards.vue'
+import Home from './views/Home.vue'
+import Faq from './views/Faq.vue'
+
 export default {
   name: 'App',
-  components: {DeckCards}
+  components: {Home , Faq }
  
 }
 </script>

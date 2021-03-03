@@ -14,7 +14,7 @@
                     <b-card-text>
                     {{item.description}}
                     </b-card-text>
-
+                      
                     <b-button
                     variant="primary"
                     >See Blog</b-button
@@ -30,10 +30,14 @@ export default {
     data() {
         return {
             items: [
-                    {name: 'Music Blog 1 ', img:'https://picsum.photos/600/300/?image=25', description: 'Blog of Event Here'},
-                    {name: 'Music Blog 2 ', img:'https://picsum.photos/600/300/?image=25', description: 'Blog of Event Here'},
-                    {name: 'Music Blog 3 ', img:'https://picsum.photos/600/300/?image=25', description: 'Blog of Event Here'},
-                    {name: 'Music Blog 3 ', img:'https://picsum.photos/600/300/?image=25', description: 'Blog of Event Here'}
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  Lorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.'},
+                    {name: 'Music Blog ', img:'https://picsum.photos/600/300/?image=25', description: '  Lorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.'},
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius..'},
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.'},
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.'},
+                    {name: 'Music Blog ', img:'https://picsum.photos/600/300/?image=25', description: '  LoLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius.'},
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius..'},
+                    {name: 'Music Blog  ', img:'https://picsum.photos/600/300/?image=25', description: '  LLorem ipsum dolor sit amet consectetur  blanditiis minus voluptates molestiae, totam eius..'}
             ]
         }
     }
