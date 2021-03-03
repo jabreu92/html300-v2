@@ -6,17 +6,17 @@
     <router-view />
     -->
   
-    <TopNavbar />
+    <CarrouselMain />
    
   </div>
 </template>
 <script>
 
 
-import TopNavbar from './components/TopNavbar.vue'
+import CarrouselMain from './components/CarrouselMain.vue'
 export default {
   name: 'App',
-  components: {TopNavbar}
+  components: {CarrouselMain}
  
 }
 </script>

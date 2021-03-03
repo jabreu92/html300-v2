@@ -6,11 +6,9 @@
 </template>
 
 <script>
-import JumbotronHeader from '../components/JumbotronHeader.vue'
-export default {
-    components: { JumbotronHeader
 
-    }
+export default {
+  
 
 }
 </script>
