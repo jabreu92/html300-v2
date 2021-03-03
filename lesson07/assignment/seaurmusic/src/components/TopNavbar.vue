@@ -5,8 +5,8 @@
       <b-navbar-brand href="#">SeaUrMusic</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item href="#">Home</b-nav-item>
-           <b-nav-item href="#">FAQ</b-nav-item>
+           <b-nav-item to="/some/route/foo" exact exact-active-class="active">Home</b-nav-item>
+          <b-nav-item to="/some/route/bar" exact exact-active-class="active">FAQ</b-nav-item>
         </b-navbar-nav>
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
