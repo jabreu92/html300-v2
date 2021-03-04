@@ -1,25 +1,22 @@
 <template>
   <div>
    
-      <b-container fluid class="bv-example-row">
+   <b-container fluid class="bv-example-row">
       <JumbotronHeader />
      </b-container>
      <b-container fluid class="bv-example-row">
       <TopNavbar />
      </b-container>
-     <b-container fluid class="bv-example-row">
+
+     <b-container fluid >
       <b-row>
-       <b-col lg="5">
-         <CarrouselMain />
-           <b-calendar block locale="en-US"></b-calendar>
+       <b-col lg="12">
+         <ImageCards />
         </b-col>
-        <b-col lg="7">
-         <DeckCards />
-         </b-col>
-       </b-row>
+      </b-row>
      </b-container>
 
-      <b-container fluid class="bv-example-row">
+       <b-container fluid class="bv-example-row">
       <TopNavbar />
      </b-container>
      
@@ -27,19 +24,21 @@
       <JumbotronFooter />
      </b-container>
     
-    
+     
  </div>
 </template>
 <script>
-import CarrouselMain from '../components/CarrouselMain.vue'
-import DeckCards from '../components/DeckCards.vue'
+
 import JumbotronHeader from '../components/JumbotronHeader.vue'
 import JumbotronFooter from '../components/JumbotronFooter.vue'
 import TopNavbar from '../components/TopNavbar.vue'
+import ImageCards from '../components/ImageCards.vue'
+
+
 
 export default {
-  name: 'Home',
-  components: {CarrouselMain , DeckCards , JumbotronHeader , JumbotronFooter, TopNavbar }
+  name: 'Events',
+  components: {ImageCards , JumbotronHeader , TopNavbar  , JumbotronFooter }
  
 }
 </script>

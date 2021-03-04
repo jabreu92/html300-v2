@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
+import Events from './views/Events.vue'
 import Faq from './views/Faq.vue'
 
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
@@ -15,7 +16,8 @@ Vue.use(VueRouter)
 
 const routes = [ 
   { path: '/', component: Home},
-  { path: '/faq', component: Faq}
+  { path: '/faq', component: Faq},
+  { path: '/events', component: Events}
 
 ];
 
