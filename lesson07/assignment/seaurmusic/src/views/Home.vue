@@ -1,12 +1,5 @@
 <template>
   <div>
-   
-      <b-container fluid class="bv-example-row">
-      <JumbotronHeader />
-     </b-container>
-     <b-container fluid class="bv-example-row">
-      <TopNavbar />
-     </b-container>
      <b-container fluid class="bv-example-row">
       <b-row>
        <b-col lg="5">
@@ -18,16 +11,6 @@
          </b-col>
        </b-row>
      </b-container>
-
-      <b-container fluid class="bv-example-row">
-      <TopNavbar />
-     </b-container>
-     
-   <b-container fluid class="bv-example-row">
-      <JumbotronFooter />
-     </b-container>
-    
-    
  </div>
 </template>
 <script>

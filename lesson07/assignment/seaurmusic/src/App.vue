@@ -1,27 +1,36 @@
 <template>
   <div id="app">
-    <!-- Include the top jumbo nav bar and same for bottom navbar and jumbo footer here since they are universal take them out from the home faq view -->
-    <!--Add image page with gallery of images with different sizes and responsive look into cards layout boosttrap -->
-
-
-
-    
-    <router-view></router-view>
-  
+    <!-- Universal Component -->
+    <b-container fluid class="bv-example-row">
+      <JumbotronHeader />
+     </b-container>
+     <b-container fluid class="bv-example-row">
+      <TopNavbar />
+     </b-container>
+     <!-- Universal Component -->
+    <!-- injecting views with router links -->
+    <router-view> </router-view>
+      <!-- Universal Component -->
+      <b-container fluid class="bv-example-row">
+      <TopNavbar />
+     </b-container>
+   <b-container fluid class="bv-example-row">
+      <JumbotronFooter />
+     </b-container>
+       <!-- Universal Component -->
   </div>
-  
 </template>
+
 <script>
 
-
 import Home from './views/Home.vue'
-import Faq from './views/Faq.vue'
-import Events from './views/Events.vue'
-
+import JumbotronHeader from './components/JumbotronHeader.vue'
+import JumbotronFooter from './components/JumbotronFooter.vue'
+import TopNavbar from './components/TopNavbar.vue'
 
 export default {
   name: 'App',
-  components: {Home , Faq, Events }
+  components: {Home, JumbotronHeader , JumbotronFooter, TopNavbar }
  
 }
 </script>
