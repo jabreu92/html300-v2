@@ -1,7 +1,6 @@
 <template>
    <div>
     <b-img thumbnail :src="imageSrcUrl" fluid :alt="imageAlt" :title="imageTitle"></b-img>
-    
   </div>
 </template>
 
