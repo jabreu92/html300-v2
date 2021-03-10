@@ -1,36 +1,26 @@
 <template>
   <div id="app">
-    <!-- Universal Component -->
-    <b-container fluid class="bv-example-row">
-      <JumbotronHeader />
-     </b-container>
-     <b-container fluid class="bv-example-row">
-      <TopNavbar />
-     </b-container>
-     <!-- Universal Component -->
-    <!-- injecting views with router links -->
-    <router-view> </router-view>
-      <!-- Universal Component -->
-      <b-container fluid class="bv-example-row">
-      <TopNavbar />
-     </b-container>
-   <b-container fluid class="bv-example-row">
-      <JumbotronFooter />
-     </b-container>
-       <!-- Universal Component -->
+
+   <BootstrapImage :image-src-url="this.src" :image-alt="this.alt" :image-title="this.title"/> 
+
   </div>
 </template>
 
 <script>
 
-import Home from './views/Home.vue'
-import JumbotronHeader from './components/JumbotronHeader.vue'
-import JumbotronFooter from './components/JumbotronFooter.vue'
-import TopNavbar from './components/TopNavbar.vue'
+import BootstrapImage from './components/BootstrapImage.vue'
+
 
 export default {
   name: 'App',
-  components: {Home, JumbotronHeader , JumbotronFooter, TopNavbar }
+  components: {BootstrapImage },
+  data () {
+    return {
+       src: 'https://picsum.photos/250/250/?image=54',
+       alt: 'custom alt',
+       title: 'custom title'
+    }
+  }
  
 }
 </script>
