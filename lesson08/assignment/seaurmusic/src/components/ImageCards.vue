@@ -4,7 +4,10 @@
       <section v-if="this.items">
       <b-col md="4" v-for="item in items" :key="item">
         <b-card :title="item.name" class="mt-1 mb-1 ">
+          <!--
         <b-img thumbnail :src="item.img" rounded fluid alt="Fluid image"></b-img>
+        -->
+        <BootstrapImage :image-src-url="item.img" /> 
       <b-card-text>
          {{item.description}}
       </b-card-text>
@@ -19,7 +22,9 @@
 </template>
 
 <script>
+import BootstrapImage from '../components/BootstrapImage.vue'
 export default {
+  components: {BootstrapImage },
     data() {
         return {
             items: [
