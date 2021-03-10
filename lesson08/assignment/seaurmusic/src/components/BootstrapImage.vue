@@ -1,5 +1,5 @@
 <template>
-   <div>
+  <div>
     <b-img thumbnail :rounded="imageBorder" :src="imageSrcUrl" fluid :alt="imageAlt" :title="imageTitle" @click="modifyBorder"></b-img>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
     imageSrcUrl: {
       type: String,
       required: true,
-      default: 'https://picsum.photos/250/250/?image=59'
+      default: 'https://picsum.photos/1024/400/?image=41'
     },
     imageAlt: {
       type: String,

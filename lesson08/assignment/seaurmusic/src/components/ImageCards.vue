@@ -1,7 +1,6 @@
 <template>
   <div>
-    <b-row>
-      <section v-if="this.items">
+    <b-row v-if="this.items"> 
       <b-col md="4" v-for="item in items" :key="item">
         <b-card :title="item.name" class="mt-1 mb-1 ">
           <!--
@@ -16,7 +15,6 @@
       </template>
     </b-card>
       </b-col>
-      </section>
     </b-row>
   </div>
 </template>
