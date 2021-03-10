@@ -1,0 +1,32 @@
+<template>
+  <div>
+     <b-container fluid class="bv-example-row">
+      <b-row>
+       <b-col lg="5">
+         <CarrouselMain />
+           <b-calendar block locale="en-US"></b-calendar>
+        </b-col>
+        <b-col lg="7">
+         <DeckCards />
+         </b-col>
+       </b-row>
+     </b-container>
+ </div>
+</template>
+<script>
+import CarrouselMain from '../components/CarrouselMain.vue'
+import DeckCards from '../components/DeckCards.vue'
+import JumbotronHeader from '../components/JumbotronHeader.vue'
+import JumbotronFooter from '../components/JumbotronFooter.vue'
+import TopNavbar from '../components/TopNavbar.vue'
+
+export default {
+  name: 'Home',
+  components: {CarrouselMain , DeckCards , JumbotronHeader , JumbotronFooter, TopNavbar }
+ 
+}
+</script>
+
+<style scoped>
+
+</style>
