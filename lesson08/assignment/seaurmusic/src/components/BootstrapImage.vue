@@ -34,7 +34,7 @@ export default {
   props: {
     imageSrcUrl: {
       type: String,
-      required: true,
+      required: false,
       default: 'https://picsum.photos/1024/400/?image=41'
     },
     imageAlt: {
